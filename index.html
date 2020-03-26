@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHOPNO!</title>
   <link rel='stylesheet' href='dist/main.css'>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
   <header class="header container">
     <span class="header__logo">
       SH
-        <span class="header__logo_letter"></span>
+      <span class="header__logo_letter"></span>
       PNO
     </span>
     <h1 class="header__title">
       SAY HELLO TO
       <span class="header__title_highlight">SHOPNO !</span>
-        <br>
+      <br>
       <span class="header__title_highlight">AGENCY</span>
       CORPORATE SHPONO THEME
     </h1>
@@ -24,7 +26,7 @@
     <div class="header__glass">
       <img class="header__glass_coaster" src="./assets/coaster.png" alt="coaster">
       <img class="header__glass_juice" src="./assets/juice_glass.png" alt="juice_glass">
-      
+
     </div>
   </header>
   <main class="container">
@@ -37,12 +39,15 @@
         </div>
         <div class="about__container_text">
           <h3>We Actually Do amazing works</h3>
-          <p>A visual approach is an approach to a runway at an airport 
-            conducted under instrument flight rules. The pilot must at all times have either the airport or the preceding aircraft in approach correct sight. conducted under instrument flight rules. The pilot must at all times.
+          <p>A visual approach is an approach to a runway at an airport
+            conducted under instrument flight rules. The pilot must at all times have either the airport or the
+            preceding aircraft in approach correct sight. conducted under instrument flight rules. The pilot must at all
+            times.
           </p>
           <p>Preceding aircraft in approach correct sight. conducted under instrument flight rules.</p>
           <h3>why we are the great?</h3>
-          <p>A visual approach is an approach to a runway at an airport conducted under instrument flight rules. The preceding aircraft in approach correct sight.</p>
+          <p>A visual approach is an approach to a runway at an airport conducted under instrument flight rules. The
+            preceding aircraft in approach correct sight.</p>
         </div>
       </div>
     </div>
@@ -94,7 +99,62 @@
         </div>
       </div>
     </div>
+    <div class="feedback">
+      <form class="feedback__form">
+        <input type="text" name="name" class="feedback__form_input" placeholder="Name*">
+        <input type="text" name="subject" class="feedback__form_input" placeholder="Subject*">
+        <input type="email" name="email" class="feedback__form_input" placeholder="E-mail*">
+        <textarea name="message" class="feedback__form_input" rows="3" placeholder="Message*"></textarea>
+        <button class="feedback__form_btn" type="submit">SEND MESSAGE</button>
+      </form>
+      <div class="feedback__address">
+        <p class="feedback__address_link">Adress line 1</p>
+        <p class="feedback__address_link">Adress line 2</p>
+        <p class="feedback__address_link">Phone: <a href="tel:+548945645">+548 945645</a></p>
+        <p class="feedback__address_link">Fax: <a href="fax:+45645654546">+456456 54546</a></p>
+        <p class="feedback__address_link">Web: <a href="www.designagency.net">www.designagency.net</a></p>
+        <p class="feedback__address_link"><a href="mailto:info@designagency.net">info@designagency.net</a></p>
+        <div id='map' class="feedback__address_map"></div>
+      </div>
+    </div>
   </main>
   <script src="dist/bundle.js"></script>
+  <script>
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoibWF4ZGFuaWxvdiIsImEiOiJjazNkYTY2ZnEwdDZxM2NwOGJwN3hiMWZ6In0.EfNj3CDIoHMbo-pt3C_4oA";
+    var map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/streets-v11",
+      zoom: 12,
+      center: [27.5557, 53.9083]
+    });
+    map.on("load", function () {
+      map.loadImage("https://i.imgur.com/MK4NUzI.png", function (error, image) {
+        if (error) throw error;
+        map.addImage("custom-marker", image);
+        map.addLayer({
+          id: "markers",
+          type: "symbol",
+          source: {
+            type: "geojson",
+            data: {
+              type: 'FeatureCollection',
+              features: [{
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                  type: "Point",
+                  coordinates: [27.5561, 53.9081]
+                }
+              }]
+            }
+          },
+          layout: {
+            "icon-image": "custom-marker",
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
