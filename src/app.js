@@ -1,5 +1,6 @@
 import map from './js/map';
 import popUp from './js/popUp';
+import { displayMemberInfo, hideMemberInfo } from './js/memberInfo'
 import './scss/style.scss';
 
 map();
@@ -16,7 +17,13 @@ features.forEach(feature => {
 
 members.forEach(member => {
   member.addEventListener('mouseenter', () => {
-    console.log('enter')
+    displayMemberInfo(member)
+  })
+})
+
+members.forEach(member => {
+  member.addEventListener('mouseleave', () => {
+    hideMemberInfo(member);
   })
 })
 
