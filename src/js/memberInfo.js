@@ -1,4 +1,7 @@
 const displayMemberInfo = (block) => {
+  if (block.querySelector('.team__grid__inner-block')) { // checks if block already created
+    return;
+  }
   block.insertAdjacentHTML('afterbegin', `
     <div class="team__grid__inner-block">
       <div class="team__grid__inner-block_triangle"></div>
@@ -22,12 +25,17 @@ const displayMemberInfo = (block) => {
         </div>
       </div>
     </div>`
-  )
+  );
 }
 
 const hideMemberInfo = (block) => {
   const deletedBlock = block.querySelector('.team__grid__inner-block');
-  deletedBlock.remove()
+  if (deletedBlock) { // checks if block exists
+    deletedBlock.style.opacity = 0;
+    setTimeout(() => {
+      deletedBlock.remove();
+    }, 200);
+  }
 }
 
 export { displayMemberInfo, hideMemberInfo };

@@ -192,6 +192,8 @@ $highlight-opacity: #76F4EA80;
   padding: 20px;
   bottom: 0;
   left: 0;
+  transition: opacity .2s ease-in;
+  animation: show-info .2s 1 ease-in;
   &_triangle{
     margin-left: 25px;
     width: 0;
@@ -348,5 +350,14 @@ $highlight-opacity: #76F4EA80;
   img{
     height: 90vh;
     width: auto;
+  }
+}
+
+@keyframes show-info{
+  0%{
+    opacity:0;
+  }
+  100% {
+    opacity:1;
   }
 }
