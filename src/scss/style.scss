@@ -1,12 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap);
 
-$montserrat: 'Montserrat', serif; 
+$montserrat: 'Montserrat', serif;
+$merriweather: 'Merriweather', serif;
 $highlight-opacity: #76F4EA80;
 
 %flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title{
+  font-family: $montserrat;
+  font-size: 2.375rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtitle{
+  font-family: $merriweather;
+  font-size: 1.125rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 *{
@@ -84,4 +100,9 @@ $highlight-opacity: #76F4EA80;
       left: 5px;
     }
   }
+}
+
+.about, .works, .team{
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
