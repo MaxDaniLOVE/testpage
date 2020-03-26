@@ -276,7 +276,7 @@ $highlight-opacity: #76F4EA80;
     }
   }
 }
-.darken-bg{
+.pop-up{
   position: fixed;
   background-color: #00000020;
   display: none;
@@ -287,6 +287,21 @@ $highlight-opacity: #76F4EA80;
   height: 100vh;
   width: 100vw;
   z-index: 1000;
+  &__close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background-color: #6EEEE4;
+    border: 1px solid black;
+    height: 2.5rem;
+    width: 2.5rem;
+    transition: all .2s ease-in;
+    &:hover{
+      cursor: pointer;
+      transition: all .2s ease-in;
+      background-color: #6EEEE480;
+    }
+  }
   img{
     height: 90vh;
     width: auto;

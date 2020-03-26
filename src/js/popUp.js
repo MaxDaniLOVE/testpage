@@ -1,12 +1,12 @@
 const popUp = (imageLink) => {
-  const background = document.querySelector('.darken-bg');
-  background.style.display = 'flex'
+  const background = document.querySelector('.pop-up');
+  background.style.display = 'flex';
   const img = document.createElement('IMG');
-  img.setAttribute('src', imageLink)
+  img.setAttribute('src', imageLink);
   background.appendChild(img);
-  background.addEventListener('click', () => {
+  document.querySelector('.pop-up__close-btn').addEventListener('click', () => {
     background.style.display = 'none';
-    background.removeChild(img)
+    img.remove();
   })
 }
 
