@@ -26,5 +26,3 @@ members.forEach(member => {
     hideMemberInfo(member);
   })
 })
-
-console.log('there will be script for pop-up');
