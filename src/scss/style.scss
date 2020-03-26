@@ -181,6 +181,8 @@ $highlight-opacity: #76F4EA80;
 }
 
 .feedback{
+  padding-top: 100px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
   &__form{
@@ -229,6 +231,31 @@ $highlight-opacity: #76F4EA80;
     &_map{
       width: 100%;
       height: 225px;
+    }
+  }
+}
+.footer{
+  @extend %flex-centered;
+  flex-direction: column;
+  height: 320px;
+  background-color: #262B2E;
+  color: #fff;
+  &__title{
+    font-family: $raleway;
+    font-size: 1rem;
+    text-align: center;
+  }
+  &__btn-group{
+    &_btn{
+      padding: 9px 16px;
+      display: inline-block;
+      background-color: #71F6EB;
+      height: 41px;
+      width: 47px;
+      color: #000;
+      margin: 10px;
+      text-decoration: none;
+      font-size: 1.5rem;
     }
   }
 }
