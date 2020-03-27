@@ -425,3 +425,35 @@ $highlight-opacity: #76F4EA80;
     opacity:1;
   }
 }
+
+@media only screen and (max-width: 1240px) {
+  .header__glass{
+    right: 16rem;
+    bottom: 12rem;
+  }
+  .container{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+  .about__container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .team{
+    padding-bottom: 0;
+  }
+  .team__grid__inner-block{
+    padding: 1rem;
+    &_title{
+      padding: 0;
+      h4, p{
+        font-size: 1rem;
+        padding: 0;
+      }
+    }
+    
+    .team__grid__inner-block_main{
+      padding: 1rem;
+    }
+  }
+}
