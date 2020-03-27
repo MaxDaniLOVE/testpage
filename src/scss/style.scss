@@ -336,6 +336,8 @@ $highlight-opacity: #76F4EA80;
 }
 .footer{
   @extend %flex-centered;
+  padding-top: 5.5rem;
+  justify-content: flex-start;
   flex-direction: column;
   height: 320px;
   background-color: #262B2E;
@@ -346,14 +348,15 @@ $highlight-opacity: #76F4EA80;
     text-align: center;
   }
   &__btn-group{
+    @extend %flex-centered;
+    margin-top: 0.5rem;
     &_btn{
-      padding: 9px 16px;
-      display: inline-block;
+      @extend %flex-centered;
       background-color: #71F6EB;
-      height: 41px;
-      width: 47px;
+      height: 2.5rem;
+      width: 2.875rem;
       color: #000;
-      margin: 10px;
+      margin: 10px 4px;
       text-decoration: none;
       font-size: 1.5rem;
       transition: all .2s ease-in;
