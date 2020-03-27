@@ -507,3 +507,45 @@ $highlight-opacity: #76F4EA80;
     }
   }
 }
+@media only screen and (max-width: 768px){
+  .title{
+    font-size: 1.8rem;
+  }  
+  .header__title{
+    font-size: 2rem;
+  }
+  .about__container_image{
+    display: none;
+  }
+  .about__container_text{
+    padding: 0;
+    width: 100%;
+    text-align: justify;
+  }
+  .works{
+    &__grid{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+  .team{
+    &__grid{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 27.8rem 27.5rem 27.5rem;
+      margin-top: 2rem;
+    }
+  }
+  .feedback{
+    display: flex;
+    flex-direction: column;
+    &__form, &__address{
+      width: 100%;
+      &_btn{
+        width: 100%;
+      }
+    }
+    &__address{
+      padding-top: 0;
+    }
+  }
+}
