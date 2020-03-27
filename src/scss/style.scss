@@ -549,3 +549,21 @@ $highlight-opacity: #76F4EA80;
     }
   }
 }
+@media only screen and (max-width: 425px){
+  .container{
+    padding: 1rem;
+  }
+  .header{
+    height: fit-content;
+    &__title{
+      margin: 5rem 0 5rem;
+    }
+  }
+  .team{
+    &__grid{
+      grid-template-columns: initial;
+      grid-template-rows: 27.8rem 27.5rem 27.5rem 27.5rem;
+      margin-top: 2rem;
+    }
+  }
+}
