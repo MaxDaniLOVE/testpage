@@ -51,19 +51,18 @@ $highlight-opacity: #76F4EA80;
 }
 
 .container{
-  padding: 0 110px;
+  padding: 0 9.3rem;
 }
 
 .header{
   background-color: #EFF0F2;
-  padding-top: 50px;
+  padding-top: 4rem;
   padding-bottom: 100px;
   position: relative;
   height: 807px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
   &__logo{
     @extend %flex-centered;
     align-self: flex-start;
@@ -84,6 +83,7 @@ $highlight-opacity: #76F4EA80;
     }
   }
   &__title{
+    margin: 12.1rem 0 9rem;
     text-shadow: 7px 7px 6px rgba(0,0,0,0.3);
     font-family: $montserrat;
     font-size: 2.8rem;
@@ -107,10 +107,9 @@ $highlight-opacity: #76F4EA80;
     }
   }
   &__glass{
-    margin-right: 90px;
     position: absolute;
-    right: 156px;
-    bottom: 121px;
+    right: 20.2rem;
+    bottom: 15rem;
     &_coaster, &_juice{
       left: 0;
       top: 0;
