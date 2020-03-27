@@ -140,6 +140,7 @@ $highlight-opacity: #76F4EA80;
       width: 400px;
       height: 480px;
       img{
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -253,7 +254,20 @@ $highlight-opacity: #76F4EA80;
   padding-bottom: 7.75rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  &:before {
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, #f8fafa 0%, #f8fafae5 19%, #f8fafadb 40%, #f8fafac0 67%, #f8fafabb 100%);
+    z-index: 2;
+  }
   &__form{
+    position: relative;
+    z-index: 3;
     width: 38.375rem;
     display: flex;
     flex-direction: column;
@@ -285,6 +299,8 @@ $highlight-opacity: #76F4EA80;
     }
   }
   &__address{
+    position: relative;
+    z-index: 3;
     width: 31.25rem;
     background-color: #021623CC;
     padding: 2.1rem 1.5rem 1rem 1.2rem;
