@@ -457,3 +457,53 @@ $highlight-opacity: #76F4EA80;
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .header{
+    height: 40rem;
+    &__glass{
+      display: none;
+    }
+    &__title{
+      margin: 8rem 0 5rem;
+    }
+  }
+  .about{
+    &__container{
+      padding-top: 3rem;
+      padding-bottom: 0;
+    }
+  }
+  .works{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__grid{
+      margin-top: 2rem;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  .team{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__grid{
+      margin-top: 2rem;
+    }
+  }
+  .feedback{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .footer{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    .footer__btn-group_btn{
+      margin: 0 1rem;
+    }
+  }
+}
