@@ -22,6 +22,17 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|gif|jpg|ico)$/, // for images
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[sha1:hash:7].[ext]'
+            }
+          }
+        ]
+      },
     ],
   },
   plugins: [

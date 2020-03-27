@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap);
+$bg-img: url('../../assets/footer.png');
 
 $montserrat: 'Montserrat', serif;
 $merriweather: 'Merriweather', serif;
@@ -234,6 +235,7 @@ $highlight-opacity: #76F4EA80;
 }
 
 .feedback{
+  background-image: $bg-img;
   padding-top: 100px;
   padding-bottom: 60px;
   display: flex;
