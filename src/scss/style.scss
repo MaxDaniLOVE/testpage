@@ -32,6 +32,7 @@ $highlight-opacity: #76F4EA80;
   font-size: 2.375rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .subtitle{
@@ -145,16 +146,17 @@ $highlight-opacity: #76F4EA80;
     }
     &_text{
       width: 50%;
+      line-height: 28px;
       h3{
         font-family: $merriweather;
         font-size: 1.25rem;
         text-transform: uppercase;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
       }
       p{
         font-family: $raleway;
         font-size: 1rem;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
       }
     }
   }
