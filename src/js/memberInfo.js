@@ -13,16 +13,16 @@ const displayMemberInfo = (block) => {
         <p class="team__grid__inner-block_body">Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.</p>
         <div class="team__grid__inner-block_links-block">
           <a href="#" class="team__grid__inner-block_links-block_link">
-            <i class="fa fa-pinterest-p"></i>
+            <i class="fa fa-facebook-f"></i>
           </a>
           <a href="#" class="team__grid__inner-block_links-block_link">
             <i class="fa fa-twitter"></i>
           </a>
           <a href="#" class="team__grid__inner-block_links-block_link">
-            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-globe"></i>
           </a>
           <a href="#" class="team__grid__inner-block_links-block_link">
-            <i class="fa fa-basketball-ball"></i>
+            <i class="fa fa-envelope"></i>
           </a>
         </div>
       </div>
