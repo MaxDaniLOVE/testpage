@@ -206,7 +206,7 @@ $highlight-opacity: #76F4EA80;
 
 .team__grid__inner-block{
   position: absolute;
-  padding: 20px;
+  padding: 1rem;
   bottom: 0;
   left: 0;
   transition: opacity .2s ease-in;
@@ -216,34 +216,52 @@ $highlight-opacity: #76F4EA80;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 19px 32.9px 19px;
+    border-width: 0 10.5px 18.2px 10.5px;
     border-color: transparent transparent #71F6EB transparent
   }
   &_main{
     height: 100%;
     background-color: #71F6EB;
-    padding: 50px;
+    padding: 2.2rem
   }
   &_title{
-    font-size: 1.25rem;
-    display: inline;
-    font-family: $merriweather;
-  }
-  &_subtitle{
-    display: inline;
-    font-family: $merriweather;
-    color: #656566;
-    font-style: italic;
+    display: flex;
+    align-items: center;
+    padding-left: 0.3rem;
+    h4{
+      font-size: 1.25rem;
+      font-family: $merriweather;
+    }
+    p{
+      padding-left: 0.3rem;
+      font-family: $merriweather;
+      color: #656566;
+      font-style: italic;
+    }
   }
   &_body{
     font-size: 1rem;
     font-family: $raleway;
-    margin: 15px 0; 
+    margin: 1.2rem 0 2.2rem; 
+    line-height: 1.5rem;
+    letter-spacing: 1px;
   }
   &_links-block{
     &_link{
       text-decoration: none;
       color: #000;
+      transition: all .2s ease-in;
+      &:hover{
+        color: #fff;
+        cursor: pointer;
+        transition: all .2s ease-in;
+      }
+      &:nth-child(2){
+        margin: 0 1rem;
+      }
+      &:nth-child(2){
+        margin: 0 0.8rem;
+      }
     }
   }
 }
