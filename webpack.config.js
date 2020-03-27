@@ -38,5 +38,8 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin('style.css')
   ],
-  mode: "production"
+  mode: "production",
+  performance: {
+    maxAssetSize: 701440
+  }
 };
